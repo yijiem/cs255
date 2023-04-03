@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Crytography1 note}
+\author{yijiem }
+\date{April 2023}
+
+\begin{document}
+
+\maketitle
+
+\section*{Semantic Security:}
+
+What is the advantage of adversary A against the one time pad?
+
+$\forall A:Adv_{ss}[A,E]=|Pr[A(k\oplus m_{0})=1]-Pr[A(k\oplus m_{1})=1]|=0$
+
+\section*{Stream Ciphers are Semantically Secure [optional]:}
+
+Proof of claim 2: $\exists B: |Pr[W_{0}]-Pr[R_{0}]|=Adv_{PRG}[B,G]$ which is negligible. $B$ is a statistical test against $G$.
+
+$Adv_{PRG}[B,G]=|\Pr\limits_{r\gets \{R\}^n}(B(r)=1)-\Pr\limits_{k\gets K}(B(G(k))=1)|$
+
+If the $Adv_{PRG}$ is in-negligible, then it means that the statistical test can tell the difference between a PRG and true randomness (I think).
+
+\end{document}
+
